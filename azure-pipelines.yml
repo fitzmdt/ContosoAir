@@ -1,4 +1,3 @@
-# Test 
 pool:
   vmImage: ubuntu-latest
 trigger:
@@ -11,7 +10,7 @@ steps:
     inputs:
       command: 'custom'
       customcommand: 'install --production'
-  - script:
+  - script: |
       npm install
       npm test
     displayName: 'Run unit tests'
@@ -42,6 +41,6 @@ steps:
       TargetFolder: $(build.artifactstagingdirectory)/Templates
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: '$(build.artifactstagingdirectory)'
-      artifact: 'drop'
-      publishLocation: 'pipeline'
+    targetPath: '$(build.artifactstagingdirectory)'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
