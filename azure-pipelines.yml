@@ -40,6 +40,6 @@ steps:
       TargetFolder: $(build.artifactstagingdirectory)/Templates
   - task: PublishPipelineArtifact@1
     inputs:
-    targetPath: '$(build.artifactstagingdirectory)'
-    artifact: 'drop'
-    publishLocation: 'pipeline'
+      targetPath: '$(build.artifactstagingdirectory)'
+      artifact: 'drop'
+      publishLocation: 'pipeline'
